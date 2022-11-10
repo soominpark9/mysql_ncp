@@ -60,7 +60,7 @@ exports.eachUser = (data, cb) => {
 
 exports.posteditUser = (data, cb) => {
   conn.query(
-    `UPDATE user SET userid='${data.userid}',pw='${data.pw}',name='${data.name}' WHERE id=${id}`,
+    `UPDATE user SET userid='${data.userid}',pw='${data.pw}',name='${data.name}' WHERE id=${data.id}`,
     (err, rows) => {
       if (err) {
         throw err;
